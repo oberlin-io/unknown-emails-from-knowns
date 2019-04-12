@@ -26,6 +26,7 @@ patterns = [
 # Get CSV
 # CSV columns must be labeled as:
 # ID | Target_First | Target_Last | Known_Email | Known_First | Known_Last
+# Sheet set up at https://docs.google.com/spreadsheets/d/1FRrvsdQIqe3Ri0B8nL80NLyeq63t8mGAcwksVjYnlck/edit?usp=sharing
 df = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTMWC_UTtPwt6pF3kp8kmsQnOINaQjQ8yDo6HJVwYhaRNvsWRfHbrXcoyD3FVNki2UnjzZCZFlZoYem/pub?gid=0&single=true&output=csv")
 #df.head()
 

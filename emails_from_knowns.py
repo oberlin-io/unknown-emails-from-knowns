@@ -12,14 +12,17 @@ patterns = [
     "<last><first>",
     "<f><last>",
     "<last><f>",
+    "<first><l>",
     "<first>.<last>",
     "<last>.<first>",
     "<f>.<last>",
     "<last>.<f>",
+    "<first>.<l>",
     "<first>_<last>",
     "<last>_<first>",
     "<f>_<last>",
     "<last>_<f>",
+    "<first>_<l>", 
 ]
 
 

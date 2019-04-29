@@ -72,7 +72,7 @@ for index, row in df.iterrows():
       for label_, element_ in target.items():
         target_handle = target_handle.replace(label_, element_)
       
-      csv += row["ID"] + ","
+      csv += str(row["ID"]) + ","
       csv += row["Target_First"] + ","
       csv += row["Target_Last"] + ","
       csv += target_handle + domain + ","
@@ -83,7 +83,7 @@ for index, row in df.iterrows():
       result = True
       
   if result == False:
-    csv += row["ID"] + ","
+    csv += str(row["ID"]) + ","
     csv += row["Target_First"] + ","
     csv += row["Target_Last"] + ","
     csv += "No result,"

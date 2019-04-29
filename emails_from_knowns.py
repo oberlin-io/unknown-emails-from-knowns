@@ -30,7 +30,8 @@ patterns = [
 # CSV columns must be labeled as:
 # ID | Target_First | Target_Last | Known_Email | Known_First | Known_Last
 # Sheet set up at https://docs.google.com/spreadsheets/d/1FRrvsdQIqe3Ri0B8nL80NLyeq63t8mGAcwksVjYnlck/edit?usp=sharing
-df = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTMWC_UTtPwt6pF3kp8kmsQnOINaQjQ8yDo6HJVwYhaRNvsWRfHbrXcoyD3FVNki2UnjzZCZFlZoYem/pub?gid=0&single=true&output=csv")
+df = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTMWC_UTtPwt6pF3kp8kmsQnOINaQjQ8yDo6HJVwYhaRNvsWRfHbrXcoyD3FVNki2UnjzZCZFlZoYem/pub?gid=0&single=true&output=csv",
+  dtype={"ID": str})
 #df.head()
 
 
@@ -72,7 +73,7 @@ for index, row in df.iterrows():
       for label_, element_ in target.items():
         target_handle = target_handle.replace(label_, element_)
       
-      csv += str(row["ID"]) + ","
+      csv += row["ID"] + ","
       csv += row["Target_First"] + ","
       csv += row["Target_Last"] + ","
       csv += target_handle + domain + ","
@@ -83,7 +84,7 @@ for index, row in df.iterrows():
       result = True
       
   if result == False:
-    csv += str(row["ID"]) + ","
+    csv += row["ID"] + ","
     csv += row["Target_First"] + ","
     csv += row["Target_Last"] + ","
     csv += "No result,"
@@ -95,4 +96,4 @@ for index, row in df.iterrows():
 #print(csv)
 
 with open("generated_emails.csv", "w") as f:
-  f.write(csv)    
+  f.write(csv)

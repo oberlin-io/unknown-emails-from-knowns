@@ -22,7 +22,8 @@ patterns = [
     "<last>_<first>",
     "<f>_<last>",
     "<last>_<f>",
-    "<first>_<l>", 
+    "<first>_<l>",
+    "<last>"
 ]
 
 

@@ -3,7 +3,7 @@
 
 
 import pandas as pd
-import re
+#import re
 
 
 # Email handle patterns, with elements wrapped in <>
